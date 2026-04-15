@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-primary: #282828;
+  --color-bg-secondary: #1a1a1a;
+  --color-bg-card: #3d3d3d;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b0b0b0;
+  --color-text-muted: #777169;
+  --color-accent: #c9a86c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f4f4f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d6d6d;
+}
+
+/* Selection */
+::selection {
+  background: rgba(201, 168, 108, 0.3);
+  color: #ffffff;
+}
+
+/* Typography Classes */
+.text-display-hero {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.96px;
+}
+
+.text-section-heading {
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1.17;
+}
+
+.text-card-heading {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.text-body-large {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.text-body {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.18px;
+}
+
+.text-body-standard {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.16px;
+}
+
+.text-nav {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0.15px;
+}
+
+/* Gradient Background */
+.gradient-radial {
+  background: radial-gradient(ellipse at top, rgba(201, 168, 108, 0.15) 0%, transparent 50%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, rgba(201, 168, 108, 0.1) 0%, transparent 50%);
+}
+
+/* Button Base Styles */
+.btn {
+  @apply inline-flex items-center justify-center transition-all duration-300 ease-out;
+}
+
+.btn-pill {
+  @apply rounded-full;
+}
+
+/* Card Base Styles */
+.card {
+  @apply rounded-2xl bg-mine-900/50 backdrop-blur-sm;
+  box-shadow: rgba(255,255,255,0.06) 0px 0px 0px 1px, rgba(0,0,0,0.2) 0px 1px 2px, rgba(0,0,0,0.2) 0px 2px 4px;
+}
+
+.card-hover {
+  @apply transition-all duration-300;
+}
+
+.card-hover:hover {
+  box-shadow: rgba(255,255,255,0.08) 0px 0px 0px 1px, rgba(201, 168, 108, 0.1) 0px 4px 20px;
+  transform: translateY(-2px);
+}
+
+/* Section Container */
+.section-container {
+  @apply w-full px-4 sm:px-6 lg:px-8 xl:px-12;
+}
+
+.section-inner {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .text-display-hero {
+    font-size: 2.5rem;
+  }
+  
+  .text-section-heading {
+    font-size: 1.75rem;
+  }
+  
+  .text-card-heading {
+    font-size: 1.5rem;
+  }
+}
